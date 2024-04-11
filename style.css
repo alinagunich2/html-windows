@@ -1317,9 +1317,14 @@ body {
 
 .content-services__hide {
   display: none;
+  transition: all 0.5s;
 }
-.button-hide {
+
+.button-hide,
+.button-show {
   display: none;
 }
+
 .button-show {
+  display: block;
 }
