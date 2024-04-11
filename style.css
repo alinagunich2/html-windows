@@ -1139,16 +1139,7 @@ body {
     padding-bottom: 10px;
     padding-top: 15px;
   }
-  .header__container {
-    grid-template-areas:
-      "logo burger "
-      "tel tel ";
-    grid-template-rows: 1fr 1fr;
-    grid-template-columns: 116px 1fr;
-  }
-  .header__right {
-    justify-content: start;
-  }
+
   .about__container {
     padding-top: 48px;
   }
@@ -1258,6 +1249,18 @@ body {
   }
   .data-footer__span {
     margin-bottom: 10px;
+  }
+}
+@media (max-width: 365px) {
+  .header__container {
+    grid-template-areas:
+      "logo burger "
+      "tel tel ";
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 116px 1fr;
+  }
+  .header__right {
+    justify-content: start;
   }
 }
 @media (max-width: 365px) {
