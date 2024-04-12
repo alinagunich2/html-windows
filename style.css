@@ -1315,11 +1315,6 @@ body {
   }
 }
 
-.content-services__hide {
-  display: none;
-  transition: all 0.5s;
-}
-
 .button-hide,
 .button-show {
   display: none;
@@ -1327,4 +1322,19 @@ body {
 
 .button-show {
   display: block;
+}
+
+.content-services__hide {
+  max-height: 0;
+  overflow: hidden;
+  transition: all 2s ease;
+}
+.content-services__hide.open {
+  max-height: 1000px;
+}
+.button-svg {
+  transition: all 1s ease;
+}
+.button-svg.open {
+  transform: rotate(180deg);
 }
