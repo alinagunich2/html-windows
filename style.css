@@ -14,6 +14,14 @@
   src: url("fonts/NotoSans700.ttf");
   font-family: "NotoSans700";
 }
+@font-face {
+  src: url("fonts/Geologica300.ttf");
+  font-family: "Geologica300";
+}
+@font-face {
+  src: url("fonts/Geologica400.ttf");
+  font-family: "Geologica400";
+}
 *,
 *::before,
 *::after {
@@ -97,16 +105,18 @@ body {
 }
 .header__burder {
   display: none;
+  cursor: pointer;
 }
 .header__cross {
   display: none;
+  cursor: pointer;
 }
 .header {
   position: fixed;
   box-shadow: 0px 5px 14px 0px #00000014;
   background: #ffffff;
   width: 100%;
-  z-index: 3;
+  z-index: 20;
 }
 .header__container {
   display: flex;
@@ -752,7 +762,38 @@ body {
     grid-template-columns: repeat(3, auto);
   }
   .menu {
-    display: none;
+    display: block;
+    position: fixed;
+    top: -960px;
+    left: 0px;
+    width: 100%;
+    background-color: white;
+    padding: 66px;
+    display: flex;
+    justify-content: center;
+opacity: 0;
+height: 100vh;
+    overflow: hidden;
+    transition: all 0.8s ease;
+  }
+  .menu.open {
+    top: 121px;
+    opacity: 1;
+  }
+
+  .menu__list {
+    flex-direction: column;
+    text-align: start;
+  }
+  .menu__link {
+    border-bottom: 0;
+    font-family: "Geologica400";
+    font-size: 22px;
+    letter-spacing: 0.02em;
+    color: #225295;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+    display: block;
   }
   .header__right {
     display: flex;
@@ -867,6 +908,9 @@ body {
   .services__item {
     padding-top: 30px;
     padding-bottom: 30px;
+  }
+  .menu__link {
+    font-size: 19px;
   }
 }
 @media (max-width: 841px) {
@@ -1206,6 +1250,9 @@ body {
     font-size: 19px;
     padding: 10px 20px;
   }
+  .menu.open {
+    top: 111px;
+  }
 }
 @media (max-width: 450px) {
   .why {
@@ -1272,6 +1319,15 @@ body {
   .page__action {
     padding: 50px 0 40px;
   }
+  .menu {
+    top: 109px;
+  }
+  .menu__link {
+    font-size: 15px;
+  }
+  .menu.open {
+    top: 109px;
+  }
 }
 @media (max-width: 395px) {
   .item-why__text {
@@ -1303,7 +1359,7 @@ body {
     margin-bottom: 10px;
   }
 }
-@media (max-width: 365px) {
+@media (max-width: 385px) {
   .header__container {
     grid-template-areas:
       "logo burger "
@@ -1314,6 +1370,17 @@ body {
   .header__right {
     justify-content: start;
   }
+  .menu {
+    top: -279px;
+    z-index: -1;
+}
+  .menu.open {
+    top: 158px;
+  }
+  .menu {
+        padding: 46px;
+  }
+
 }
 @media (max-width: 365px) {
   .list-main__title {

@@ -21,13 +21,18 @@ buttonsShow.forEach((button, index) => {
   });
 });
 
-const text = document.getElementById("text");
-const openBtn = document.getElementById("open");
-const hideBtn = document.getElementById("hide");
+const menu = document.getElementById("menu");
+const burger = document.getElementById("burger");
+const cross = document.getElementById("cross");
 
-openBtn.onclick = function () {
-  text.classList.add("open");
-};
-hideBtn.onclick = function () {
-  text.classList.remove("open");
-};
+burger.addEventListener("click", function () {
+  menu.classList.add("open");
+  burger.style.display = "none";
+  cross.style.display = "block";
+});
+
+cross.addEventListener("click", function () {
+  menu.classList.remove("open");
+  cross.style.display = "none";
+  burger.style.display = "block";
+});
