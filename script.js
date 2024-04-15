@@ -10,8 +10,7 @@ let titleMarginBottom = document.getElementById('fir')
 const menu = document.getElementById("menu");
 const burger = document.getElementById("burger");
 const cross = document.getElementById("cross");
-const des = document.getElementById("des");
-const mob = document.getElementById("mob");
+
 
 buttonsHide.forEach((button, index) => {
   button.addEventListener("click", () => {
@@ -30,14 +29,6 @@ buttonsShow.forEach((button, index) => {
     buttonsHide[index].style.display = "block";
   });
 });
-
-if(window.innerWidth <= 768){
-  mob.style.display='block'
-  des.style.display='none'
-}else{
-  mob.style.display='none'
-  des.style.display='block'
-}
 
 burger.addEventListener("click", function () {
   menu.classList.add("open");
