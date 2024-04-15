@@ -70,6 +70,26 @@ menuLink.forEach((link,index)=>{
         }
       }
      });
-  // }
   })
 
+let listMainLink = Array.from(document.getElementsByClassName('list-main__link'))
+let contentSButton  = Array.from(document.getElementsByClassName('content-services__button'))
+
+
+listMainLink.forEach((link,index)=>{
+  link.addEventListener("click", function () {
+    contentSButton.forEach((padTop)=>{
+      padTop.style.paddingTop = "0px"
+    })
+  if(index>0){
+    contentSButton[index-1].style.paddingTop = "20px"
+  }
+
+    if(index !==3){
+      contentHide[index].classList.add("open");
+      buttonsSvg[index].classList.add("open");
+      buttonsHide[index].style.display = "block";
+      buttonsShow[index].style.display = "none";
+    }
+
+  })})
