@@ -803,6 +803,7 @@ opacity: 0;
 height: 100vh;
     overflow: hidden;
     transition: all 0.8s ease;
+ 
   }
   .menu.open {
     top: 121px;
@@ -1247,6 +1248,7 @@ height: 100vh;
     left: -6px;
     z-index: -3;
   }
+
 }
 
 @media (max-width: 540px) {
@@ -1363,15 +1365,14 @@ height: 100vh;
   .page__action {
     padding: 50px 0 40px;
   }
-  .menu {
-    top: 109px;
-  }
+
   .menu__link {
     font-size: 15px;
   }
   .menu.open {
-    top: 109px;
-  }
+    top: 108px;
+}
+
 }
 @media (max-width: 395px) {
   .item-why__text {
@@ -1414,10 +1415,7 @@ height: 100vh;
   .header__right {
     justify-content: start;
   }
-  .menu {
-    top: -279px;
-    z-index: -1;
-}
+
   .menu.open {
     top: 158px;
   }

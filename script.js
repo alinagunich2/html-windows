@@ -3,6 +3,15 @@ const buttonsShow = document.querySelectorAll(".button-show");
 const buttonsSvg = document.querySelectorAll(".button-svg");
 const contentHide = document.querySelectorAll(".content-services__hide");
 const menuLink = Array.from(document.getElementsByClassName("menu__link"));
+let headerPadding = Array.from(document.getElementsByClassName('header-padding'))
+let listMainLink = Array.from(document.getElementsByClassName('list-main__link'))
+let contentSButton  = Array.from(document.getElementsByClassName('content-services__button'))
+let titleMarginBottom = document.getElementById('fir')
+const menu = document.getElementById("menu");
+const burger = document.getElementById("burger");
+const cross = document.getElementById("cross");
+const des = document.getElementById("des");
+const mob = document.getElementById("mob");
 
 buttonsHide.forEach((button, index) => {
   button.addEventListener("click", () => {
@@ -22,11 +31,6 @@ buttonsShow.forEach((button, index) => {
   });
 });
 
-const menu = document.getElementById("menu");
-const burger = document.getElementById("burger");
-const cross = document.getElementById("cross");
-const des = document.getElementById("des");
-const mob = document.getElementById("mob");
 if(window.innerWidth <= 768){
   mob.style.display='block'
   des.style.display='none'
@@ -55,7 +59,6 @@ menuLink.forEach((link)=>{
   });
 })
 
-let headerPadding = Array.from(document.getElementsByClassName('header-padding'))
 menuLink.forEach((link,index)=>{
     link.addEventListener("click", function () {
       headerPadding.forEach((padTop)=>{
@@ -81,18 +84,43 @@ menuLink.forEach((link,index)=>{
      });
   })
 
-let listMainLink = Array.from(document.getElementsByClassName('list-main__link'))
-let contentSButton  = Array.from(document.getElementsByClassName('content-services__button'))
-
 
 listMainLink.forEach((link,index)=>{
   link.addEventListener("click", function () {
     contentSButton.forEach((padTop)=>{
-      padTop.style.paddingTop = "0px"
+      padTop.style.paddingBottom = "0px"
     })
+
+    if(window.innerWidth <= 578 && window.innerWidth >= 385){
+      titleMarginBottom.style.marginBottom='30px'
+
+      if(index===0){
+        titleMarginBottom.style.marginBottom='50px'
+      }
+  
+    }else if(window.innerWidth <= 385){
+      titleMarginBottom.style.marginBottom='30px'
+
+      if(index===0){
+        titleMarginBottom.style.marginBottom='100px'
+      }
+    }
+
+   
+
   if(index>0){
-    contentSButton[index-1].style.paddingTop = "20px"
+    if(window.innerWidth >= 960){
+      contentSButton[index-1].style.paddingBottom = "20px"
+    }else if(window.innerWidth <= 960  && window.innerWidth >= 385){
+      contentSButton[index-1].style.paddingBottom = "60px"
+    }else if(window.innerWidth <= 385){
+      contentSButton[index-1].style.paddingBottom = "100px"
+    }
   }
+  if(index === 1){
+    headerPadding[index].style.paddingTop = "50px"
+  }
+ 
 
     if(index !==3){
       contentHide[index].classList.add("open");
