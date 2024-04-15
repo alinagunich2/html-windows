@@ -93,6 +93,7 @@ body {
   margin-bottom: 70px;
 }
 
+
 /* -----------header----------------- */
 .header__background {
   position: absolute;
@@ -118,6 +119,7 @@ body {
   width: 100%;
   z-index: 20;
 }
+
 .header__container {
   display: flex;
   justify-content: space-between;
@@ -237,8 +239,14 @@ body {
 /* -----------about----------------- */
 
 .about {
+  position: relative;
 }
 
+/* .header-margin-height{
+  height: 80px;
+  width: 100%;
+  background-color: red;
+} */
 .about__container {
   padding-top: 170px;
   padding-bottom: 170px;
@@ -291,11 +299,13 @@ body {
   position: relative;
 }
 .why {
-  padding: 120px 0 150px;
+ 
 }
 .why__container {
   position: relative;
   z-index: 2;
+  padding-top:  120px;
+  padding-bottom: 150px;
 }
 
 .why__title span {
@@ -365,9 +375,10 @@ body {
 .page__services {
 }
 .services {
-  padding-top: 170px;
+
 }
 .services__container {
+  padding-top: 170px;
 }
 ._container {
 }
@@ -473,11 +484,13 @@ body {
 }
 
 .page__stages {
-  padding: 170px 0;
+
 }
 .stages {
 }
 .stages__container {
+  padding-top: 170px;
+  padding-bottom: 170px;
 }
 .stages__title {
   margin-bottom: 160px;
@@ -814,10 +827,13 @@ height: 100vh;
   .why__item {
     flex: 1 1 70%;
   }
-  .page__stages {
-    padding: 106px 0;
-  }
-  .services {
+ 
+  .stages__container {
+    padding-top: 106px;
+    padding-bottom: 106px;
+}
+ 
+  .services__container {
     padding-top: 106px;
   }
 }
@@ -842,8 +858,10 @@ height: 100vh;
     line-height: 49px;
   }
 
-  .why {
-    padding: 76px 0 93px;
+
+  .why__container {
+    padding-top:  76px;
+    padding-bottom: 93px;
   }
 
   .item-why__icon {
@@ -960,7 +978,8 @@ height: 100vh;
   }
 }
 @media (max-width: 800px) {
-  .page__stages {
+  
+  .stages__container {
     padding-top: 75px;
     padding-bottom: 120px;
   }
@@ -974,7 +993,8 @@ height: 100vh;
     width: 94%;
     height: 232px;
   }
-  .services {
+
+  .services__container {
     padding-top: 77px;
   }
   .header__background {
@@ -1255,8 +1275,10 @@ height: 100vh;
   }
 }
 @media (max-width: 450px) {
-  .why {
-    padding: 76px 0 63px;
+
+  .why__container {
+    padding-top:  76px;
+    padding-bottom: 63px;
   }
   .why__list {
     display: flex;
@@ -1287,10 +1309,13 @@ height: 100vh;
     font-size: 16px;
     line-height: 22.4px;
   }
-  .why {
-    padding: 40px 0 40px;
+ 
+   .why__container {
+    padding-top:  40px;
+    padding-bottom: 40px;
   }
-  .page__stages {
+ 
+  .stages__container {
     padding-top: 100px;
     padding-bottom: 100px;
   }
