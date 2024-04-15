@@ -25,6 +25,15 @@ buttonsShow.forEach((button, index) => {
 const menu = document.getElementById("menu");
 const burger = document.getElementById("burger");
 const cross = document.getElementById("cross");
+const des = document.getElementById("des");
+const mob = document.getElementById("mob");
+if(window.innerWidth <= 768){
+  mob.style.display='block'
+  des.style.display='none'
+}else{
+  mob.style.display='none'
+  des.style.display='block'
+}
 
 burger.addEventListener("click", function () {
   menu.classList.add("open");

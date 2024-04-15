@@ -209,9 +209,16 @@ body {
 .list-main__item {
   flex: 1 1 48%;
   background-color: #ffffffcc;
-  padding: 30px;
+  transition: all 0.7s ease;
+  cursor: pointer;
 }
 .list-main__link {
+  display: block;
+  padding: 30px;
+
+}
+.list-main__item:hover {
+  background-color: #0053a6;
 }
 .list-main__title {
   font-family: "NotoSans500";
@@ -219,12 +226,19 @@ body {
   line-height: 27.24px;
   color: #225295;
   margin-bottom: 15px;
+  transition: all 0.7s ease;
 }
 .list-main__text {
   font-family: "NotoSans400";
   font-size: 16px;
   line-height: 24px;
+  transition: all 0.7s ease;
 }
+.list-main__item:hover .list-main__title,
+.list-main__item:hover .list-main__text {
+color: white;
+}
+
 .main__img {
   /* position: absolute; */
 }
@@ -1130,6 +1144,10 @@ height: 100vh;
     height: 52%;
   }
   .list-main__item {
+
+   
+  }
+  .list-main__link {
     background-color: #0053a6;
     padding: 15px 10px;
   }
