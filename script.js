@@ -30,6 +30,10 @@ buttonsShow.forEach((button, index) => {
   });
 });
 
+// if(){
+
+// }
+
 burger.addEventListener("click", function () {
   menu.classList.add("open");
   burger.style.display = "none";
@@ -45,8 +49,8 @@ cross.addEventListener("click", function () {
 menuLink.forEach((link)=>{
   link.addEventListener("click", () => {
     menu.classList.remove("open");
-    cross.style.display = "none";
-    burger.style.display = "block";
+    // cross.style.display = "none";
+    // burger.style.display = "block";
   });
 })
 
@@ -121,3 +125,27 @@ listMainLink.forEach((link,index)=>{
     }
 
   })})
+
+
+
+  let options={
+    root: null,
+    rootMargin:'5px',
+    threshold:0.5
+  }
+  let callback=function(entries,observer){
+    entries.forEach(entry=>{
+        if(entry.isIntersecting){
+           
+            entry.target.classList.add('_active')
+        }else{
+         
+        }
+    })
+  }
+  
+  let observer = new IntersectionObserver(callback,options)
+  let targets = document.querySelectorAll('._element-animation')
+  targets.forEach(target=>{
+    observer.observe(target)
+  })
