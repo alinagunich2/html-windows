@@ -324,7 +324,7 @@ height: 100%;
 }
 .list-main__item:hover .list-main__link{
   background-color: #0053a6;
-  transform: translate(-5px, -7px) rotate(-2deg);
+  transform: translate(-6px, -5px) rotate(-1deg);
 }
 
 
