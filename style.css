@@ -237,24 +237,27 @@ transform: scale(1.01);
   flex-wrap: wrap;
   gap: 30px;
 }
+/* .list-main__item:hover {
+  background-color: #0053a6;
+} */
 .list-main__item {
   flex: 1 1 48%;
   background-color: #ffffffcc;
   cursor: pointer;
-  opacity: 0;
 
-  animation-name: scale;
+
+  /* animation-name: scale;
   animation-duration: 1s;
   animation-timing-function: ease;
-  animation-fill-mode: forwards;
-  transition: all 0.7s ease;
+  animation-fill-mode: forwards; */
+  transition: all 1s ease;
 
 
   position: relative;
 }
 
 
-.list-main__item:first-child {
+/* .list-main__item:first-child {
   animation-delay: 1.5s; 
 }
 .list-main__item:nth-child(2) {
@@ -275,27 +278,57 @@ transform: scale(1.01);
     opacity: 1;
     transform: scale(1);
   }
+} */
+.list-main__item:nth-child(1){
+
+  opacity: 0;
+    transform: scale(0);
+    transition: all 1s ease ;
 }
-.list-main__item{
+.list-main__item:nth-child(2){
+
+  opacity: 0;
+    transform: scale(0);
+    transition: all 1s ease 0.4s;
+}
+.list-main__item:nth-child(3){
+
+  opacity: 0;
+    transform: scale(0);
+    transition: all 1s ease 0.8s;
+}
+.list-main__item:nth-child(4){
+
+  opacity: 0;
+    transform: scale(0);
+    transition: all 1s ease 1.2s;
+}
+.list-main__item:nth-child(1)._active,
+.list-main__item:nth-child(2)._active,
+.list-main__item:nth-child(3)._active,
+.list-main__item:nth-child(4)._active{
+  opacity: 1;
+    transform: scale(1);
+}
 
 
-}
+
 
 .list-main__link {
   display: block;
   padding: 30px;
-  transition: all 0.7s ease;
+  transition: all 0.5s ease;
   position: relative;
 z-index: 2;
+height: 100%;
 }
 .list-main__item:hover .list-main__link{
-  transform: scale(1.03);
-}
-
-
-.list-main__item:hover {
   background-color: #0053a6;
+  transform: translate(-5px, -7px) rotate(-2deg);
 }
+
+
+
 /* .list-main__item::after{
   display: none;
   position: absolute;
@@ -884,13 +917,13 @@ transition: all 0.5s ease-out;
     transform: rotate(0deg) scale(1);
   }
   25% {
-    transform: rotate(90deg) scale(1.2);
+    transform: rotate(90deg) scale(1.1);
   }
   50% {
     transform: rotate(180deg) scale(1);
   }
   75% {
-    transform: rotate(270deg) scale(1.2);
+    transform: rotate(270deg) scale(1.1);
   }
 
 }
@@ -1079,7 +1112,7 @@ transform: scale(1.01);
   .menu {
     display: block;
     position: fixed;
-    top: -960px;
+    top: -1050px;
     left: 0px;
     width: 100%;
     background-color: white;
