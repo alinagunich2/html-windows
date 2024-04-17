@@ -45,14 +45,16 @@ cross.addEventListener("click", function () {
   cross.style.display = "none";
   burger.style.display = "block";
 });
+if(window.innerWidth <= 1120){
+  menuLink.forEach((link)=>{
+    link.addEventListener("click", () => {
+      menu.classList.remove("open");
+      cross.style.display = "none";
+      burger.style.display = "block";
+    });
+  })
+}
 
-menuLink.forEach((link)=>{
-  link.addEventListener("click", () => {
-    menu.classList.remove("open");
-    // cross.style.display = "none";
-    // burger.style.display = "block";
-  });
-})
 
 menuLink.forEach((link,index)=>{
     link.addEventListener("click", function () {
