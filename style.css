@@ -93,7 +93,10 @@ body {
 .title-button {
   margin-bottom: 70px;
 }
-
+.logo img{
+  height: 87px;
+  width: 130px;
+}
 
 /* -----------header----------------- */
 .header__background {
@@ -293,7 +296,6 @@ height: 100%;
 }
 .list-main__item:hover .list-main__link{
   background-color: #0053a6;
-  transform: translate(-6px, -5px) rotate(-1deg);
 }
 .list-main__title {
   font-family: "NotoSans500";
@@ -312,6 +314,7 @@ height: 100%;
 .list-main__item:hover .list-main__title,
 .list-main__item:hover .list-main__text {
 color: white;
+transform: scale(1.02);
 }
 
 .main__img {
@@ -1440,6 +1443,17 @@ height: 100vh;
     transform: scale(1) ;
     }
   
+}
+.mob{
+  display: none;
+}
+@media (max-width: 735px) {
+.des{
+  display: none;
+}
+.mob{
+  display: block;
+}
 }
 @media (max-width: 665px) {
   .item-stages__img img {
