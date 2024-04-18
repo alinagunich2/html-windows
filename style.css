@@ -184,10 +184,7 @@ transform: scale(1.01);
 /* -----------main----------------- */
 
 .main {
-  /* height: 87vh;
-  position: relative; */
   padding: 200px 0 20px;
-
   height: 100vh;
   position: relative;
   overflow: hidden;
@@ -282,10 +279,6 @@ transform: scale(1.01);
   opacity: 1;
     transform: scale(1);
 }
-
-
-
-
 .list-main__link {
   display: block;
   padding: 30px;
@@ -333,12 +326,6 @@ transform: scale(1.02);
 .about {
   position: relative;
 }
-
-/* .header-margin-height{
-  height: 80px;
-  width: 100%;
-  background-color: red;
-} */
 .about__container {
   padding-top: 170px;
   padding-bottom: 170px;
@@ -374,7 +361,6 @@ transform: scale(1.02);
 }
 .about__block:first-child .about__text {
   margin-right: 20px;
-  /* transform: translate(240px,100%) scale(.5); */
   transition: all 1s ease;
   z-index: -1;
   position: relative;
@@ -539,13 +525,7 @@ transform: scale(1.02);
   z-index: 1;
 }
 
-/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!----------------------------------------------------------------services-----------.about__block {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    font-size: 18px;
-    line-height: 23.4px;
-}------ */
+/*------------------------------------------------------services----- */
 .page__services {
 }
 .services {
@@ -644,11 +624,11 @@ transform: scale(1.02);
 }
 
 .content-services__button button:after {
-  display: block; /*превращаем его в блочный элемент*/
-content: ""; /*контента в данном блоке не будет поэтому в кавычках ничего не ставим*/
-height: 2px; /*задаём высоту линии*/
-width: 0%; /*задаём начальную ширину элемента (линии)*/
-background-color: #225384; /*цвет фона элемента*/
+  display: block; 
+content: ""; 
+height: 2px;
+width: 0%;
+background-color: #225384;
 transition: width 0.4s ease-in-out;
 }
 
@@ -912,16 +892,9 @@ transition: all 0.5s ease-out;
   color: #ffffff;
 }
 .content-action {
-  /* background-color: red;
-  width: 100px;
-  height: 200px; */
   position: relative;
 }
-.content-action__det {
-  /* position: relative;
-  top: 0;
-  right: 0; */
-}
+
 .content-action__det::after {
   position: absolute;
   content: "";
@@ -933,8 +906,6 @@ transition: all 0.5s ease-out;
   border-right: 103.5px solid transparent;
   border-bottom: 103.5px solid #0053a6;
   border-top: 104.5px solid #0053a6;
-  /* box-shadow: 4.5806450843811035px 3.6645162105560303px 12.825806617736816px 0px
-    #00000014; */
   z-index: 3;
 }
 .content-action__det::before {
@@ -952,8 +923,7 @@ transition: all 0.5s ease-out;
 }
 
 /* -----------footer----------------- */
-.footer {
-}
+
 .footer__container {
   padding-top: 60px;
   padding-bottom: 60px;
@@ -962,10 +932,7 @@ transition: all 0.5s ease-out;
   align-items: center;
   position: relative;
 }
-.header__logo {
-}
-.footer__data {
-}
+
 .data-footer {
   display: flex;
   align-items: center;
